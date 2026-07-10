@@ -2093,22 +2093,32 @@ wheels = [
 [[package]]
 name = "talesweaver"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "flax" },
     { name = "jax" },
+    { name = "orbax-checkpoint" },
+    { name = "tiktoken" },
+]
+
+[package.dev-dependencies]
+dev = [
     { name = "jupyterlab" },
     { name = "matplotlib" },
-    { name = "tiktoken" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "flax", specifier = ">=0.12.7" },
     { name = "jax", specifier = ">=0.10.2" },
+    { name = "orbax-checkpoint", specifier = ">=0.11.0" },
+    { name = "tiktoken", specifier = ">=0.13.0" },
+]
+
+[package.metadata.requires-dev]
+dev = [
     { name = "jupyterlab", specifier = ">=4.6.1" },
     { name = "matplotlib", specifier = ">=3.11.0" },
-    { name = "tiktoken", specifier = ">=0.13.0" },
 ]
 
 [[package]]
